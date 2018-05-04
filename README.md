@@ -86,7 +86,7 @@ render () {
       searchSuggestions={searchSuggestions}
       userSearch={this.userSearch.bind(this)}
       clearSearch={this.clearSearch.bind(this)}
-      placeHolder="Asdasd..." />
+      placeHolder="Search..." />
   )
 }
 
