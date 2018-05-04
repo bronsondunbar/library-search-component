@@ -80,27 +80,13 @@ render () {
   let searchTerm = this.state.searchTerm;
 
   return (
-    <section role="component">
-      <div className="container">
-        <header>
-          <h2>Search Component</h2>
-        </header>
-
-        <div className="grid">
-
-          <div className="item">
-            <SearchComponent
-              searchData={data}
-              searchTerm={searchTerm}
-              searchSuggestions={searchSuggestions}
-              userSearch={this.userSearch.bind(this)}
-              clearSearch={this.clearSearch.bind(this)}
-              placeHolder="Asdasd..." />
-          </div>
-
-        </div>
-      </div>
-    </section>
+    <SearchComponent
+      searchData={data}
+      searchTerm={searchTerm}
+      searchSuggestions={searchSuggestions}
+      userSearch={this.userSearch.bind(this)}
+      clearSearch={this.clearSearch.bind(this)}
+      placeHolder="Asdasd..." />
   )
 }
 
