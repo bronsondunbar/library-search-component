@@ -60,7 +60,6 @@ clearSearch (event) {
 }
 
 render () {
-
   const data = [
     {
       name: 'Item one',
