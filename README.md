@@ -3,14 +3,14 @@
 
 Search component for React
 
-| Prop              | Default   | Values                                    |
-| :---------------- |:--------- | :---------------------------------------- |
-| searchData        | none      | Data object                               |
-| searchTerm        | none      | Text that is being searched               |
-| searchSuggestions | none      | Suggestions based on search term          |
-| userSearch        | none      | userSearch function to create suggestions |
-| clearSearch       | none      | clearSearch function to clear suggestions |
-| placeHolder       | Search... | Default search text                       |
+| Prop              | Values               |
+| :---------------- | :------------------- |
+| searchData        | Object               |
+| searchTerm        | String               |
+| searchSuggestions | Object               |
+| userSearch        | userSearch function  |
+| clearSearch       | clearSearch function |
+| placeHolder       | String               |
 
 ```
 constructor(props) {
