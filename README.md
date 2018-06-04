@@ -6,6 +6,7 @@ Search component for React
 Install and save component as a dependency
 
 ```
+
 npm install --save library-search-component
 
 ```
@@ -13,7 +14,8 @@ npm install --save library-search-component
 Import component into your app
 
 ```
-import ButtonGroup from 'library-search-component'
+
+import Search from 'library-search-component'
 
 ```
 
