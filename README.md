@@ -3,16 +3,45 @@
 
 Search component for React
 
-| Prop              | Values               |
-| :---------------- | :------------------- |
-| searchData        | Object               |
-| searchTerm        | String               |
-| searchSuggestions | Object               |
-| userSearch        | userSearch function  |
-| clearSearch       | clearSearch function |
-| placeHolder       | String               |
+Install and save component as a dependency
 
 ```
+npm install --save library-search-component
+
+```
+
+Import component into your app
+
+```
+import ButtonGroup from 'library-search-component'
+
+```
+
+Create an array of objects with the keys being name and id
+
+```
+
+const data = [
+  {
+    name: 'Item one',
+    id: 'one'
+  },
+  {
+    name: 'Item two',
+    id: 'two'
+  },
+  {
+    name: 'Item three',
+    id: 'three'
+  }
+]
+
+```
+
+Create and assign search term state with empty value
+
+```
+
 constructor(props) {
   super(props)
 
@@ -20,6 +49,12 @@ constructor(props) {
     searchTerm: ''
   }
 }
+
+```
+
+Create the function that will handle the user search
+
+```
 
 userSearch (event) {
   const data = [
@@ -49,6 +84,12 @@ userSearch (event) {
   })
 }
 
+```
+
+Create the function to clear a user search
+
+```
+
 clearSearch (event) {
   event.preventDefault();
 
@@ -58,6 +99,12 @@ clearSearch (event) {
     return { searchTerm, searchTerm }
   })
 }
+
+```
+
+Render the component with the functions we created, object array as well as any other props that are needed
+
+```
 
 render () {
   const data = [
@@ -90,3 +137,13 @@ render () {
 }
 
 ```
+
+
+| Prop              | Values               |
+| :---------------- | :------------------- |
+| searchData        | Object               |
+| searchTerm        | String               |
+| searchSuggestions | Object               |
+| userSearch        | userSearch function  |
+| clearSearch       | clearSearch function |
+| placeHolder       | String               |
