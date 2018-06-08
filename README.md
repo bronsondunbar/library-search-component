@@ -108,34 +108,53 @@ Render the component with the functions we created, object array as well as any 
 
 ```
 
-render () {
+render() {
   const data = [
     {
-      name: 'Item one',
-      id: 'one'
+      name: "Item one",
+      id: "one"
     },
     {
-      name: 'Item two',
-      id: 'two'
+      name: "Item two",
+      id: "two"
     },
     {
-      name: 'Item three',
-      id: 'three'
+      name: "Item three",
+      id: "three"
     }
-  ]
+  ];
 
   let searchSuggestions = this.state.searchSuggestions;
   let searchTerm = this.state.searchTerm;
 
   return (
-    <SearchComponent
-      searchData={data}
-      searchTerm={searchTerm}
-      searchSuggestions={searchSuggestions}
-      userSearch={this.userSearch.bind(this)}
-      clearSearch={this.clearSearch.bind(this)}
-      placeHolder="Search..." />
-  )
+    <div className="btn-group search">
+      <Search
+        searchData={data}
+        searchTerm={searchTerm}
+        searchSuggestions={searchSuggestions}
+        userSearch={this.userSearch.bind(this)}
+        clearSearch={this.clearSearch.bind(this)}
+        placeHolder="Search..."
+      />
+
+      {searchTerm !== "" ? (
+        <div className="dropdown-menu">
+          {searchSuggestions.length > 0 ? (
+            searchSuggestions.map((searchSuggestions, index) => {
+              return (
+                <a href="/" className="dropdown-item" onClick="/" key={index}>
+                  {searchSuggestions.name}
+                </a>
+              );
+            })
+          ) : (
+            <div className="dropdown-item">No result(s)</div>
+          )}
+        </div>
+      ) : null}
+    </div>
+  );
 }
 
 ```
