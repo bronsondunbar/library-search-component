@@ -76,8 +76,8 @@ userSearch (event) {
 
   let searchTerm = event.target.value.toLowerCase()
 
-  let searchSuggestions = searchData.filter((searchData) => {
-    let filterComponents = searchData.name.toLowerCase()
+  let searchSuggestions = searchData.filter((data) => {
+    let filterComponents = data.name.toLowerCase()
     return filterComponents.includes(searchTerm)
   })
 
