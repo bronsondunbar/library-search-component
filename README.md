@@ -23,7 +23,7 @@ Create an array of objects with the keys being name and id
 
 ```
 
-const data = [
+const searchData = [
   {
     name: 'Item one',
     id: 'one'
@@ -59,7 +59,7 @@ Create the function that will handle the user search
 ```
 
 userSearch (event) {
-  const data = [
+  const searchData = [
     {
       name: 'Item one',
       id: 'one'
@@ -76,7 +76,7 @@ userSearch (event) {
 
   let searchTerm = event.target.value.toLowerCase()
 
-  let searchSuggestions = data.filter((searchData) => {
+  let searchSuggestions = searchData.filter((searchData) => {
     let filterComponents = searchData.name.toLowerCase()
     return filterComponents.includes(searchTerm)
   })
@@ -109,7 +109,7 @@ Render the component with the functions we created, object array as well as any 
 ```
 
 render() {
-  const data = [
+  const searchData = [
     {
       name: "Item one",
       id: "one"
@@ -130,7 +130,7 @@ render() {
   return (
     <div className="btn-group search">
       <Search
-        searchData={data}
+        searchData={searchData}
         searchTerm={searchTerm}
         searchSuggestions={searchSuggestions}
         userSearch={this.userSearch.bind(this)}
