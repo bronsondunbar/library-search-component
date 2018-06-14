@@ -7158,7 +7158,17 @@ a.text-dark:hover, a.text-dark:focus {
     width: 100%;
     border-color: #a0a0a0; }
     .search .dropdown-menu .dropdown-item {
-      padding: 0.5rem 1.5rem; }
+      padding: 0.5rem 1.5rem;
+      color: #262626; }
+      .search .dropdown-menu .dropdown-item .active {
+        background: #ffd100;
+        color: #262626; }
+      .search .dropdown-menu .dropdown-item:active {
+        background: #ffd100;
+        color: #262626 !important; }
+      .search .dropdown-menu .dropdown-item:hover, .search .dropdown-menu .dropdown-item:focus {
+        background: #ffd100;
+        color: #262626 !important; }
 
 .input-group-text {
   background: #ffd100;
